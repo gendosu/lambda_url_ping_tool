@@ -1,14 +1,16 @@
 'use strict';
 
 exports.handler = (event, context, callback) => {
-  var webclient = require("request");
+  const axios = require('axios');
 
-  var url = event.url;
+  const url = event.url;
 
-  webclient.get({
-    url: url,
-  }, function (error, response, body) {
-    console.log(error);
-    console.log(body);
-  });
+  axios.get(url)
+    .then(response => {
+      console.log('success');
+      console.log(response.data);
+    })
+    .catch(error => {
+      callback(error);
+    })
 }
