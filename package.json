@@ -1,0 +1,19 @@
+{
+  "name": "lambda_url_ping_tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node ./proxy.js",
+  "scripts": {
+    "run": "node ./proxy.js",
+    "build": "mkdir -p dist; zip -r dist/app.zip * --exclude dist --exclude proxy.js --exclude package*"
+  },
+  "author": {
+    "name": "GENDOSU",
+    "email": "gen_takahashi@yahoo.co.jp",
+    "url": "https://gendosu.jp/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
